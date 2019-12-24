@@ -1,0 +1,59 @@
+html,body{
+    height: 100%;
+    font-family: sans-serif;
+}
+.wrapper{
+    height: 100%;
+    padding: 50px;
+}
+
+/*----Основный стили----*/
+
+.block{
+
+}
+.block__item{
+    margin: 0 0 20px 0;
+
+}
+.block__title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.block__title:before,
+.block__title:after{
+    content: "";
+    width: .8rem;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 8px;
+    transition: all 0.5s ease;
+}
+.block__title:before{
+    transform: rotate(40deg);
+    left: 0;
+}
+.block__title:after{
+    transform: rotate(-40deg);
+    left: 9px;
+}
+.block__title.active:before,
+.block__title.active:after{
+    background-color: blueviolet;
+}
+.block__title.active:before{
+    transform: rotate(-40deg);
+}
+.block__title.active:after{
+    transform: rotate(40deg);
+}
+
+.block__text{
+    padding: 10px 0 0 0;
+    display: none;
+
+}
